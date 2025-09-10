@@ -1,15 +1,14 @@
-import React, { PropsWithChildren } from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React, { PropsWithChildren, useMemo } from 'react';
+import { QueryClient, QueryClientProvider, QueryClientConfig } from '@tanstack/react-query';
 
-// Create a client
-const queryClient = new QueryClient();
+interface QueryProviderProps {
+  config?: QueryClientConfig;
+}
 
-export const QueryProvider = ({ children }: PropsWithChildren) => {
+export const QueryProvider = ({ children, config }: PropsWithChildren<QueryProviderProps>) => {
+  const queryClient = useMemo(() => new QueryClient(config), [config]);
+
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 };
-
-// It can also be useful to export the queryClient instance if you need to use it outside of components,
-// for example, for pre-fetching data.
-export { queryClient };
