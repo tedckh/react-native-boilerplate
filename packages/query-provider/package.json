@@ -1,0 +1,12 @@
+{
+  "name": "@my-rn-boilerplate/query-provider",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@tanstack/react-query": "^5.51.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}
