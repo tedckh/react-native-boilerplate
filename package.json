@@ -8,6 +8,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:simulator": "react-native run-ios --simulator=\"$(xcrun simctl list devices available --json | jq -r '.devices[] | .[] | select(.isAvailable == true) | .name' | head -n 1)\"",
+    "ios:device": "react-native run-ios --device=\"$(xcrun simctl list devices --json | jq -r '.devices[] | .[] | select(.isAvailable == true and .deviceType == \"device\") | .name' | head -n 1)\"",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
