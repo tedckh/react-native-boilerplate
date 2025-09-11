@@ -37,7 +37,7 @@ This boilerplate uses an `npm` workspace structure to organize the main applicat
 For the best development experience, open this project using the provided VS Code workspace file. This ensures all recommended settings, extensions, and monorepo configurations are applied.
 
 ```bash
-code react-native-boilerplate.code-workspace
+code react-native.code-workspace
 ```
 
 (If `code` command is not found, ensure VS Code is installed and its `code` command is in your PATH.)
