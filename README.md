@@ -32,6 +32,16 @@ This boilerplate uses an `npm` workspace structure to organize the main applicat
 -   npm (comes with Node.js).
 -   React Native development environment setup (Xcode for iOS, Android Studio for Android). Follow the official [React Native Environment Setup Guide](https://reactnative.dev/docs/environment-setup).
 
+### 0. Opening the Project in VS Code
+
+For the best development experience, open this project using the provided VS Code workspace file. This ensures all recommended settings, extensions, and monorepo configurations are applied.
+
+```bash
+code react-native-boilerplate.code-workspace
+```
+
+(If `code` command is not found, ensure VS Code is installed and its `code` command is in your PATH.)
+
 **1. Install Dependencies:**
 Navigate to the root of the `react-native-boilerplate` and install all monorepo dependencies:
 
